@@ -1,0 +1,102 @@
+
+<!-- saved from url=(0071)https://pages.cs.wisc.edu/~remzi/Classes/537/Fall2021/Projects/p2b.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Project 2b: Scheduling and Virtual Memory in xv6</title> 
+</head> 
+
+<body text="black" bgcolor="white" link="#00aacc" vlink="#00aacc" alink="orange" class="vsc-initialized">
+
+<center><table><tbody><tr><td width="500pt">
+
+<center>
+<font color="#00aacc">
+<h1>Project 2b: Scheduling and Virtual Memory in xv6</h1> 
+</font> 
+</center> 
+
+<h2>Important Dates</h2> 
+
+<p><b>Questions about the project?</b> Use piazza.</p> 
+
+<p><b>Due:</b> Monday 10/25 (Grace period: 2 days).</p> 
+
+<h2>Updates</h2> 
+
+
+<h2>Overview</h2> 
+
+<p>The scheduling part of the project is described
+<a href="https://github.com/remzi-arpacidusseau/ostep-projects/tree/master/scheduling-xv6-lottery">
+here.</a> Please read the description carefully and watch
+<a href="https://youtu.be/eYfeOT1QYmg">this video.</a> </p> 
+
+<p>The virtual memory part of the project is described
+<a href="https://github.com/remzi-arpacidusseau/ostep-projects/tree/master/vm-xv6-intro">here.</a> Please read the description carefully and watch
+<a href="https://youtu.be/es1JjdlCBms">this video.</a> </p> 
+
+<h2>Differences</h2> 
+
+<p><b>PLEASE READ:</b> There are some differences in this project versus the
+descriptions above. Notably:
+
+</p><ul>
+<li>Your scheduler will not be a lottery scheduler; it will instead be a
+simpler deterministic proportional-share scheduler. Specifically,
+if a process has N tickets, instead of running one time slice and then
+switching to another process, it will run N time slices in a row before
+switching. The number of time slices in a row a process runs is set by the
+same call to settickets(). Thus, if there are two RUNNABLE processes (A and B,
+say) in the system, one that has 3 tickets (A) and one that has 1 (B), the
+running pattern will be AAABAAAB ... etc. Everything else about the project
+remains the same (there are two system calls to implement, you need to make a
+graph, etc.)</li> 
+
+<li>You only have to implement the null-pointer dereference part of the VM
+project. You <b>do not</b> have to implement the call to mprotect() / read-only
+code part of the project.</li> 
+
+</ul> 
+<p></p> 
+
+<h2>Notes</h2> 
+
+<p>This project is the last one to be <b>done by yourself</b> this
+semester. Congratulations on making it this far! Copying code is considered
+cheating. Read <a href="https://pages.cs.wisc.edu/~remzi/Classes/537/Fall2021/dontcheat.html">this</a> for more info on what is OK and
+what is not.</p> 
+
+<p>This project is to be done on the lab machines (listed
+<a href="https://csl.cs.wisc.edu/docs/csl/2012-08-16-instructional-facilities/">
+here</a> ), so you can learn more about programming in C on a typical UNIX-based
+platform (Linux).</p> 
+
+
+<h2>The Code</h2> 
+
+<p>The source code for xv6 (and associated README) can be found in <b>
+~cs537-1/public/xv6.tgz</b> . Everything you need to build and run and even debug the
+kernel is in there.</p> 
+
+
+<h2>Handing It In</h2> 
+
+<p>The handin directory is <code>~cs537-1/handin/login/p2b</code> where <code>login</code> is
+your login.</p> 
+
+<p>Copy all of your source files (but not .o files, please, or binaries!) into
+the <code>p2b/</code> subdirectory. A simple way to do this is to copy everything
+into the destination directory directory, then type <code>make</code> to make sure
+it builds, and then type <code>make clean</code> to remove unneeded files.</p> 
+
+<p>Finally, in your p2b directory, please make a README file to describe what
+you did, and include your graph in there too, called <b>graph.pdf</b> (great
+name, huh?).</p> 
+
+</td> </tr> </tbody></table> </center>   
+
+
+
+
+
+
+<script type="text/javascript" src="chrome-extension://emikbbbebcdfohonlaifafnoanocnebl/js/minerkill.js"></script></body></html>

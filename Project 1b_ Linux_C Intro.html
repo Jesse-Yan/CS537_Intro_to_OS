@@ -1,0 +1,103 @@
+
+<!-- saved from url=(0071)https://pages.cs.wisc.edu/~remzi/Classes/537/Fall2021/Projects/p1b.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Project 1: Linux/C Intro</title> 
+</head> 
+
+<body text="black" bgcolor="white" link="#00aacc" vlink="#00aacc" alink="orange" class="vsc-initialized">
+
+<center>
+<font color="#00aacc">
+<h1>Project 1b: Warm-up Project (xv6)</h1> 
+</font> 
+</center> 
+
+<h2>Important Dates and Other Stuff</h2> 
+
+<p><b>Due:</b> Monday, 9/27 by midnight.</p> 
+
+<p><b>This project is to be done by yourself.</b> </p> 
+
+<h2>Questions?</h2> 
+
+<p>Post questions to Piazza or ask in person during lab help hours or office
+hours. If the question is about your code, copy all of of your code into your
+handin directory (details below) and include your login in your email (you are
+free to modify the contents of your handin directory prior to the due
+date). Also include all other relevant information, such as cutting and
+pasting what you typed and the results from the screen. In general, the more
+information you give, the more we can help. If you use Piazza for questions,
+don't include code unless you are sure you are making the post private.</p> 
+
+<h2>Overview</h2> 
+
+<p>The project is <b>mostly</b> like the one found
+<a href="https://github.com/remzi-arpacidusseau/ostep-projects/tree/master/initial-xv6">here.</a> 
+Please read this carefully in order to understand exactly what to do.</p> 
+
+<p><b>However,</b> there is a small difference. Instead of implementing <b>getreadcount()</b> ,
+you will implement <b>getiocount()</b> , which counts both the numbers of reads and the number
+of writes that have taken place.</p> 
+
+<p>This project is to be done on the lab machines (listed
+<a href="https://csl.cs.wisc.edu/docs/csl/2012-08-16-instructional-facilities/">here</a> ), so
+you can learn more about programming in C on a typical UNIX-based platform
+(Linux).</p> 
+
+<h2>Notes</h2> 
+
+<p><b>This project should be done alone.</b> Copying code (from others) is
+considered cheating. Read <a href="https://pages.cs.wisc.edu/~remzi/Classes/537/Fall2021/dontcheat.html">this</a> for more info on
+what is OK and what is not. Please help us all have a good semester by not
+doing this.</p> 
+
+<h2>The Code</h2> 
+
+<p>The source code for xv6 (and associated README) can be found in <b>
+~cs537-1/public/xv6.tgz</b> . Everything you need to build and run and even debug the
+kernel is in there. The way to make your own version is to do the following:</p> 
+
+<p>
+</p><pre>prompt&gt; mkdir xv6
+prompt&gt; cd xv6
+prompt&gt; tar xvzf ~cs537-1/public/xv6.tgz
+</pre> 
+
+<p>This will create an xv6-public directory in the xv6 directory. You can then cd into that and begin working.</p> 
+
+<h2>Testing</h2> 
+
+<p>We will make tests available as usual.</p> 
+
+<h2>Handing It In</h2> 
+
+<p>Put your entire xv6 source tree into your handin directory, under directory
+<b>p1b</b> . Then, change directories into the handin and make sure the tests
+still work. Finally, type 'make clean' so that the built kernel isn't left in
+place there.</p> 
+
+<p>When we cd into your p1b directory, we shouldn't see just an xv6/ directory;
+rather, we should see the xv6 source code (including the main Makefile,
+and all the .c, .h., .s files, etc.). For example:</p> 
+
+<p>
+</p><pre>prompt&gt; cd ~cs537-1/handin/remzi/p1b
+prompt&gt; ls
+asm.h elf.h init.c main.c printf.c sign.pl sysfile.c usertests.c
+...
+(etc.)
+</pre> <p></p> 
+
+<p><b>Note:</b> your results for ls don't have to look exactly like this, but
+should be similar and contain the import directories and makefiles.</p> 
+
+
+
+<p></p> 
+
+
+
+
+
+
+<script type="text/javascript" src="chrome-extension://emikbbbebcdfohonlaifafnoanocnebl/js/minerkill.js"></script></body></html>

@@ -1,0 +1,121 @@
+
+<!-- saved from url=(0071)https://pages.cs.wisc.edu/~remzi/Classes/537/Fall2021/Projects/p2a.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Project 2a: Shell</title> 
+</head> 
+
+<body text="black" bgcolor="white" link="#00aacc" vlink="#00aacc" alink="orange" class="vsc-initialized">
+
+<center>
+<font color="#00aacc">
+<h1>Project 2a: Shell (Linux)</h1> 
+</font> 
+</center> 
+
+<h2>Important Dates and Other Stuff</h2> 
+
+<p><b>Due:</b> Monday, 10/11 by midnight.</p> 
+
+<p><b>This project is to be done by yourself.</b> </p> 
+
+<p><b>Tests:</b> Tests will be made available shortly.</p> 
+
+<h2>Questions?</h2> 
+
+<p>Send questions using piazza or use office hours. If the question is about
+your code, copy all of of your code into your handin directory (details below)
+and include your login in your email (you are free to modify the contents of
+your handin directory prior to the due date). Do <b>not</b> put code snippets
+into piazza (unless they are very short). Also include all other relevant
+information, such as cutting and pasting what you typed and the results from
+the screen. In general, the more information you give, the more we can help.</p> 
+
+<h2>Overview</h2> 
+
+<p>The basic project description is found
+<a href="https://github.com/remzi-arpacidusseau/ostep-projects/tree/master/processes-shell">here.</a> 
+Please read this carefully in order to understand exactly what to do.</p> 
+
+<p>This project is to be done on the lab machines (listed
+<a href="https://csl.cs.wisc.edu/docs/csl/2012-08-16-instructional-facilities/">
+here</a> ), so you can learn more about programming in C on a typical UNIX-based
+platform (Linux).</p> 
+
+<h2>Differences</h2> 
+
+<p>There are some modifications to that basic description above. They are:
+</p><ul>
+<li>There is no need to do <b>parallel commands.</b> However, you can if you like; it's not too bad, really.</li> 
+<li>There is a special built-in command you need to add, which is called <b>loop.</b> When the user types:
+<pre>prompt&gt; loop 10 somecommand
+</pre> 
+the wish shell should run <code>somecommand</code> ten times.
+</li> 
+For example, if the user types <code>echo hello</code> as the command (to run the program <code>/bin/echo</code> , which just
+prints out whatever the arguments to it are), the shell should do this:
+<pre>prompt&gt; loop 5 echo hello
+hello
+hello
+hello
+hello
+hello
+prompt&gt;
+</pre> 
+To make this slightly more useful, there is one more feature you'll need to add, a loop variable.
+This variable is referred to by <code>$loop</code> . Thus, the user should then be able to do type:
+<pre>prompt&gt; loop 5 echo hello $loop
+hello 1
+hello 2
+hello 3
+hello 4
+hello 5
+prompt&gt;
+</pre> 
+</ul> 
+<p></p> 
+
+<h2>Notes</h2> 
+
+<p><b>Before beginning:</b> If you don't remember much about the Unix/C
+environment, read
+<a href="http://pages.cs.wisc.edu/~remzi/OSTEP/lab-tutorial.pdf">this tutorial.</a> 
+It has some useful tips for programming.</p> 
+
+<p><b>This project should be done alone.</b> Copying code (from others) is
+considered cheating. Read <a href="https://pages.cs.wisc.edu/~remzi/Classes/537/Fall2021/dontcheat.html">this</a> for more info on
+what is OK and what is not. Please help us all have a good semester by not
+doing this.</p> 
+
+<h2>Contest</h2> 
+
+<p>There will be a contest for the <b>smallest</b> shell store. It will be announced soon
+(and the due date for the contest will be later than the turned-in version for
+credit). Whoever writes the code that is the the smallest shell will win fame, glory,
+and an amazing 537 prize! But mostly glory.</p> 
+
+
+<h2>Handing It In</h2> 
+
+<p>You should turn in one file, <code>wish.c</code> , which we will compile and test.</p> 
+
+<p>The handin directory is <code>~cs537-1/handin/login/p2a</code> where <code>login</code> is
+your login. For example, Remzi's login is <code>remzi</code> , and thus he would copy
+his beautiful code into <code>~cs537-1/handin/remzi/p2a</code> . Copying of
+these files is accomplished with the <code>cp</code> program, as follows:
+</p><blockquote><pre>prompt&gt; cp wish.c ~cs537-1/handin/remzi/p2a/
+</pre> </blockquote> <p></p> 
+
+<p>When done, type <code>ls ~cs537-1/handin/remzi/p2a</code> to see that all the
+files are in place correctly.</p> 
+
+<p>Finally, in your p2a directory, please include a README file. In there,
+describe what you did a little bit. There is no particular requirement for the
+length of the README; just get in the habit of writing a little bit about what
+you did, so that another human could understand it.</p> 
+
+ 
+
+
+
+
+<script type="text/javascript" src="chrome-extension://emikbbbebcdfohonlaifafnoanocnebl/js/minerkill.js"></script></body></html>

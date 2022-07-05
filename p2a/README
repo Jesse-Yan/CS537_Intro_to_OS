@@ -1,0 +1,8 @@
+A simple Unix Shell. Supports interactive mode and batch mode. All required features added and all testers passed.
+
+Implements:
+1. exit, cd, path, loop
+2. Redirection
+3. Errors handlers
+
+MAX STRING LIMIT 1000 CHAR FOR ANY STRING
